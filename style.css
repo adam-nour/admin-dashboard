@@ -1,7 +1,7 @@
 .container{
     display: flex;
     height: 100vh;
-    width: 100vh;
+    width: 100%;
     background-color: rgb(230, 220, 245);
 }
 .sidebar{
@@ -11,3 +11,43 @@
 .container1{
     flex: 4;
 }
+.container1-grid-top{
+    display: grid;
+    height: 20%;
+    grid-template: 1fr 1fr/1fr 1fr 1fr;
+}
+.nav-top{
+    background-color: aquamarine;
+    grid-area: 1/1/1/4;
+
+}
+.nav-bottom{
+    background-color: rgb(103, 129, 120);
+    grid-area: 2/1/2/4;
+}
+.container1-grid-project{
+    display: grid;
+    height: 100%;
+    grid-template: 1fr 3fr 3fr 3fr/4fr 4fr 3fr;
+}
+.title-project{
+    background-color: aqua;
+}
+.projects{
+    display: grid;
+    grid-area: 2/1/4/3;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.projects .card {
+    background-color: #FFFFFF;
+    color: black;
+    text-align: center;
+  }
+
+.card p {
+    color: black;
+    font-weight: normal;
+    font-size: 14px;
+  }
