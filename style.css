@@ -235,7 +235,6 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr;
-    grid-gap: 35px;
     list-style-type: none;
     
 }
@@ -260,10 +259,36 @@ button {
     font-weight: bolder;
   }
   
-  li:hover {
-    transform: scale(0.95); /* Slight shrink on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow on hover */
+  .nav-list-nav-styles li,
+  .setting-list-nav-styles li {
+      position: relative;
+      overflow: hidden;
   }
+  
+  .nav-list-nav-styles li:hover .material-symbols-outlined,
+  .setting-list-nav-styles li:hover .material-symbols-outlined {
+      transform: translateY(-50%);
+      transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-list-nav-styles li:hover {
+    border-radius: 20px;
+      background-color: #1d5987; /* Change background color on hover */
+      transition: background-color 0.3s ease-in-out;
+  }
+  
+  .setting-list-nav-styles li:hover {
+    border-radius: 20px;
+      background-color: #1d5987; /* Change background color on hover */
+      transition: background-color 0.3s ease-in-out;
+  }
+  
+  .nav-list-nav-styles li:hover b,
+  .setting-list-nav-styles li:hover b {
+      transform: translateY(-10%);
+      transition: transform 0.3s ease-in-out;
+  }
+  
 
   .card:hover {
     transform: scale(0.95); /* Slight shrink on hover */
@@ -271,15 +296,17 @@ button {
   }
   .nav-bar > ul>li{
     display: grid;
-    grid-template: 1fr/ 0.5fr 1fr;
+    grid-template: 1fr/ 0.25fr 1fr;
+    gap: 10px;
   }
   .setting-bar > ul>li{
     display: grid;
-    grid-template: 1fr/ 0.5fr 1fr;
+    grid-template: 1fr/ 0.3fr 1fr;
   }
   .nav-heading-clickable{
 display: flex;
 padding: 20px;
+gap: 10px;
   }
  .nav-heading-clickable > span{
   flex: 1;
@@ -288,5 +315,12 @@ padding: 20px;
   flex: 3;
  }
  .nav-list-nav-styles, .setting-list-nav-styles {
-  padding: 20px;
+  padding: 30px;
  } 
+ .nav-list-nav-styles li,
+ .setting-list-nav-styles li, 
+ .nav-heading-clickable{
+     display: flex;
+     align-items: flex-end;
+ }
+ 
