@@ -267,7 +267,7 @@ button {
   
   .nav-list-nav-styles li:hover .material-symbols-outlined,
   .setting-list-nav-styles li:hover .material-symbols-outlined {
-      transform: translateY(-50%);
+      transform: translateY(-10%);
       transition: transform 0.3s ease-in-out;
   }
   
